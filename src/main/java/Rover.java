@@ -19,6 +19,12 @@ public class Rover {
 
 
     public void land(Area area, int x, int y, String direction) {
+        if(x > area.getX()){
+            throw new IllegalArgumentException("x=20 is out of area width 10");
+        }
+        if(y>area.getY()){
+            throw new IllegalArgumentException("y=30 is out of area width 10");
+        }
         this.area = area;
         this.x = x;
         this.y = y;
