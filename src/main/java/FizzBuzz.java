@@ -16,6 +16,8 @@ public class FizzBuzz {
             result = "Fizz";
         } else if (number % 5 == 0) {
             result = "Buzz";
+        } else if (number % 7 == 0) {
+            result = "Whizz";
         } else {
             result = format("%d", number);
         }
