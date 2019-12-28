@@ -1,4 +1,6 @@
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
@@ -76,5 +78,15 @@ public class MarsRoverTest {
 
         rover.turnRight();
         assertThat(rover.getPosition()).isEqualTo("55S");
+    }
+    @Rule
+    public ExpectedException exceptedException = ExpectedException.none();
+    @Test
+    public void should_warning_when_land_out_of_area(){
+        exceptedException.expect(IllegalArgumentException.class);
+        exceptedException.expectMessage("x=20 is out of area width 10");
+        Area area = new Area(10,10);
+        Rover rover = new Rover();
+        rover.land(area,20,30,Rover.NORTH);
     }
 }
