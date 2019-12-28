@@ -28,7 +28,8 @@ public class FizzBuzzTest {
                 {7, "Whizz"},
                 {21, "FizzWhizz"},
                 {35,"BuzzWhizz"},
-                {105,"FizzBuzzWhizz"}
+                {105,"FizzBuzzWhizz"},
+                {-1,"Invalid input"}
         });
     }
 
