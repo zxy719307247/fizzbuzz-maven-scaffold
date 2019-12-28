@@ -15,6 +15,7 @@ public class FizzBuzz {
         if(number % 3 == 0){
             return "Fizz";
         }
+
         return format("%d", number);
     }
 

@@ -23,8 +23,7 @@ public class FizzBuzzTest {
         return Arrays.asList(new Object[][]{
 //                {1,"1"},
                 {3,"Fizz"},
-                {6,"Fizz"}/*,
-                {5,"Buzz"},
+                {5,"Buzz"}/*,
                 {15,"FizzBuzz"}*/
         });
     }
