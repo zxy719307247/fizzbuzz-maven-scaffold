@@ -16,6 +16,8 @@ public class Rover {
     private int y;
     private String direction;
 
+
+
     public void land(Area area, int x, int y, String direction) {
         this.area = area;
         this.x = x;
@@ -38,6 +40,30 @@ public class Rover {
             } else if (NORTH.equals(this.direction)) {
                 this.y += 1;
             }
+        }
+    }
+
+    public void turnLeft() {
+        if (EASTH.equals(this.direction)){
+            this.direction = NORTH;
+        }else if (NORTH.equals(this.direction)){
+            this.direction = WESTH;
+        }else if (WESTH.equals(this.direction)){
+            this.direction = SOUTH;
+        }else if (SOUTH.equals(this.direction)){
+            this.direction = EASTH;
+        }
+    }
+
+    public void turnRight() {
+        if (EASTH.equals(this.direction)){
+            this.direction = SOUTH;
+        }else if (SOUTH.equals(this.direction)){
+            this.direction = WESTH;
+        }else if (WESTH.equals(this.direction)){
+            this.direction = NORTH;
+        }else if (NORTH.equals(this.direction)){
+            this.direction = EASTH;
         }
     }
 }
