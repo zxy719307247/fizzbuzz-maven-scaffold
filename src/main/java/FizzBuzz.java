@@ -9,15 +9,17 @@ public class FizzBuzz {
 
 
     public static String of(int number) {
+        String result = format("%d", number);
         if (number % 3 == 0 && number % 5 == 0) {
-            return "FizzBuzz";
-        } else if (number % 3 == 0) {
-            return "Fizz";
-        } else if (number % 5 == 0) {
-            return "Buzz";
-        } else {
-            return format("%d", number);
+            result = "FizzBuzz";
         }
+        if (number % 3 == 0) {
+            result = "Fizz";
+        }
+        if (number % 5 == 0) {
+            result = "Buzz";
+        }
+        return result;
     }
 
 
