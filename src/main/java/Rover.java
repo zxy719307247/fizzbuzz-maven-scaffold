@@ -17,12 +17,11 @@ public class Rover {
     private String direction;
 
 
-
     public void land(Area area, int x, int y, String direction) {
-        if(x > area.getX()){
+        if (x > area.getX()) {
             throw new IllegalArgumentException("x=20 is out of area width 10");
         }
-        if(y>area.getY()){
+        if (y > area.getY()) {
             throw new IllegalArgumentException("y=30 is out of area width 10");
         }
         this.area = area;
@@ -50,25 +49,25 @@ public class Rover {
     }
 
     public void turnLeft() {
-        if (EASTH.equals(this.direction)){
+        if (EASTH.equals(this.direction)) {
             this.direction = NORTH;
-        }else if (NORTH.equals(this.direction)){
+        } else if (NORTH.equals(this.direction)) {
             this.direction = WESTH;
-        }else if (WESTH.equals(this.direction)){
+        } else if (WESTH.equals(this.direction)) {
             this.direction = SOUTH;
-        }else if (SOUTH.equals(this.direction)){
+        } else if (SOUTH.equals(this.direction)) {
             this.direction = EASTH;
         }
     }
 
     public void turnRight() {
-        if (EASTH.equals(this.direction)){
+        if (EASTH.equals(this.direction)) {
             this.direction = SOUTH;
-        }else if (SOUTH.equals(this.direction)){
+        } else if (SOUTH.equals(this.direction)) {
             this.direction = WESTH;
-        }else if (WESTH.equals(this.direction)){
+        } else if (WESTH.equals(this.direction)) {
             this.direction = NORTH;
-        }else if (NORTH.equals(this.direction)){
+        } else if (NORTH.equals(this.direction)) {
             this.direction = EASTH;
         }
     }

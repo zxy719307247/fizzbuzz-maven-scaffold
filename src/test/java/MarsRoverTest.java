@@ -1,8 +1,6 @@
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 
@@ -26,17 +24,17 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_move_forwd_when_direction_to_east(){
-        Area area = new Area(10,10);
+    public void should_move_forwd_when_direction_to_east() {
+        Area area = new Area(10, 10);
         Rover rover = new Rover();
-        rover.land(area,5,5,"E");
+        rover.land(area, 5, 5, "E");
         rover.move();
         String position = rover.getPosition();
         assertThat(position).isEqualTo("65E");
     }
 
     @Test
-    public void should_execute_batch_commands(){
+    public void should_execute_batch_commands() {
         Rover rover = new Rover();
         RoverController roverController = new RoverController(rover);
         String mission = "10,10,5,5,E,M,L,M,R";
@@ -45,10 +43,10 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_turn_left(){
-        Area area = new Area(10,10);
+    public void should_turn_left() {
+        Area area = new Area(10, 10);
         Rover rover = new Rover();
-        rover.land(area,5,5,Rover.SOUTH);
+        rover.land(area, 5, 5, Rover.SOUTH);
         rover.turnLeft();
         assertThat(rover.getPosition()).isEqualTo("55E");
 
@@ -63,10 +61,10 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_turn_right(){
-        Area area = new Area(10,10);
+    public void should_turn_right() {
+        Area area = new Area(10, 10);
         Rover rover = new Rover();
-        rover.land(area,5,5,Rover.SOUTH);
+        rover.land(area, 5, 5, Rover.SOUTH);
         rover.turnRight();
         assertThat(rover.getPosition()).isEqualTo("55W");
 
@@ -79,14 +77,16 @@ public class MarsRoverTest {
         rover.turnRight();
         assertThat(rover.getPosition()).isEqualTo("55S");
     }
+
     @Rule
     public ExpectedException exceptedException = ExpectedException.none();
+
     @Test
-    public void should_warning_when_land_out_of_area(){
+    public void should_warning_when_land_out_of_area() {
         exceptedException.expect(IllegalArgumentException.class);
         exceptedException.expectMessage("x=20 is out of area width 10");
-        Area area = new Area(10,10);
+        Area area = new Area(10, 10);
         Rover rover = new Rover();
-        rover.land(area,20,30,Rover.NORTH);
+        rover.land(area, 20, 30, Rover.NORTH);
     }
 }
