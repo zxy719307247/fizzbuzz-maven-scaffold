@@ -12,34 +12,17 @@ public class FizzBuzz {
 
 
     public static String of(int number) {
-
-        if (number % 3 == 0) {
+       /* if(number == 3){
             return "Fizz";
-        }
-        if(number % 5 == 0){
-            return "Buzz";
-        }
-
+        }*/
         return format("%d", number);
     }
 
     public String printFizzBuzz(int num){
         int i=1;
         List<String> fizzAndBuzzLists = new ArrayList<String>();
-        for(; i <= num ; i++){
-            fizzAndBuzzLists.add(i+"");
-        }
-        for(i = 2 ; i< num ;){
-            fizzAndBuzzLists.set(i,"fizz");
-            i+=3;
-        }
-        for(i = 4 ; i < num ;){
-            if("fizz".equals(fizzAndBuzzLists.get(i))){
-                fizzAndBuzzLists.set(i,"fizz buzz");
-            }else{
-                fizzAndBuzzLists.set(i,"buzz");
-            }
-            i+=5;
+        for(;i<num;i++){
+            fizzAndBuzzLists.add(FizzBuzz.of(i));
         }
         return fizzAndBuzzLists.toString();
     }
