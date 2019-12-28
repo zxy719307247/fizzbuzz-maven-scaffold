@@ -2,10 +2,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
+import static junit.framework.Assert.assertEquals;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 @RunWith(Parameterized.class)
@@ -31,5 +31,6 @@ public class FizzBuzzTest {
     @Test
     public void should_return_Fizz_given_num_dic_by_3() {
         assertThat(FizzBuzz.of(input)).isEqualTo(output);
+//        assertEquals(output, FizzBuzz.of(input));
     }
 }
