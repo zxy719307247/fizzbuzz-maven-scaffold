@@ -32,4 +32,13 @@ public class MarsRoverTest {
         String position = rover.getPosition();
         assertThat(position).isEqualTo("65E");
     }
+
+    @Test
+    public void should_execute_batch_commands(){
+        Rover rover = new Rover();
+        RoverController roverController = new RoverController(rover);
+        String mission = "10,10,5,5,E,M,L,M,R";
+        String position = roverController.excute(mission);
+        assertThat(position).isEqualTo("66E");
+    }
 }
