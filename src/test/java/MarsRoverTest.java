@@ -24,7 +24,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_move_forwd(){
+    public void should_move_forwd_when_direction_to_east(){
         Area area = new Area(10,10);
         Rover rover = new Rover();
         rover.land(area,5,5,"E");
