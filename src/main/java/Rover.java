@@ -9,20 +9,24 @@ public class Rover {
     private Area area;
     private int x;
     private int y;
-    private String e;
+    private String direction;
 
-    public void land(Area area, int x, int y, String e) {
+    public void land(Area area, int x, int y, String direction) {
         this.area = area;
         this.x = x;
         this.y = y;
-        this.e = e;
+        this.direction = direction;
     }
 
     public String getPosition() {
-        return format("%d%d%s", x, y, e);
+        return format("%d%d%s", x, y, direction);
     }
 
     public void move() {
-        x += 1;
+        if ("E".equals(direction)) {
+            x += 1;
+        }
+
+
     }
 }
