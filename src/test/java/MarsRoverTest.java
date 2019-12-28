@@ -59,4 +59,22 @@ public class MarsRoverTest {
         rover.turnLeft();
         assertThat(rover.getPosition()).isEqualTo("55S");
     }
+
+    @Test
+    public void should_turn_right(){
+        Area area = new Area(10,10);
+        Rover rover = new Rover();
+        rover.land(area,5,5,Rover.SOUTH);
+        rover.turnRight();
+        assertThat(rover.getPosition()).isEqualTo("55W");
+
+        rover.turnRight();
+        assertThat(rover.getPosition()).isEqualTo("55N");
+
+        rover.turnRight();
+        assertThat(rover.getPosition()).isEqualTo("55E");
+
+        rover.turnRight();
+        assertThat(rover.getPosition()).isEqualTo("55S");
+    }
 }
