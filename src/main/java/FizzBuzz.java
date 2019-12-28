@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 import static java.lang.String.format;
 
 /**
@@ -24,12 +21,5 @@ public class FizzBuzz {
         return format("%d", number);
     }
 
-    public String printFizzBuzz(int num) {
-        int i = 1;
-        List<String> fizzAndBuzzLists = new ArrayList<String>();
-        for (; i < num; i++) {
-            fizzAndBuzzLists.add(FizzBuzz.of(i));
-        }
-        return fizzAndBuzzLists.toString();
-    }
+
 }
