@@ -23,6 +23,6 @@ public class Rover {
     }
 
     public void move() {
-
+        x += 1;
     }
 }
