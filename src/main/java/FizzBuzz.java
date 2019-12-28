@@ -12,22 +12,22 @@ public class FizzBuzz {
 
 
     public static String of(int number) {
-        if(number % 3 == 0 && number % 5 == 0){
+        if (number % 3 == 0 && number % 5 == 0) {
             return "FizzBuzz";
         }
-        if(number % 3 == 0){
+        if (number % 3 == 0) {
             return "Fizz";
         }
-        if(number % 5 == 0){
+        if (number % 5 == 0) {
             return "Buzz";
         }
         return format("%d", number);
     }
 
-    public String printFizzBuzz(int num){
-        int i=1;
+    public String printFizzBuzz(int num) {
+        int i = 1;
         List<String> fizzAndBuzzLists = new ArrayList<String>();
-        for(;i<num;i++){
+        for (; i < num; i++) {
             fizzAndBuzzLists.add(FizzBuzz.of(i));
         }
         return fizzAndBuzzLists.toString();
