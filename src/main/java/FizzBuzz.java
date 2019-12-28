@@ -21,7 +21,7 @@ public class FizzBuzz {
         if(number % 5 == 0){
             return "Buzz";
         }
-        return null;
+        return format("%d", number);
     }
 
     public String printFizzBuzz(int num){
