@@ -20,6 +20,6 @@ public class MarsRoverTest {
         Rover rover = new Rover();
         rover.land(area, 5, 5, "E");
         String position = rover.getPosition();
-        assertThat(position).isEqualTo("55W");
+        assertThat(position).isEqualTo("55E");
     }
 }
