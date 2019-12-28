@@ -21,4 +21,8 @@ public class Rover {
     public String getPosition() {
         return format("%d%d%s", x, y, e);
     }
+
+    public void move() {
+
+    }
 }
