@@ -24,6 +24,8 @@ public class FizzBuzz {
             result = "Buzz";
         } else if (number % 7 == 0) {
             result = "Whizz";
+        } else if (number <= 0) {
+            result = "Invalid input";
         } else {
             result = format("%d", number);
         }
